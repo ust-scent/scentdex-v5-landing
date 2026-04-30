@@ -19,7 +19,9 @@
     <meta name="twitter:description" content="Peer-to-peer limit-order DEX for Scent Token. Audit-first, zero escrow." />
     <meta name="twitter:image" content="https://github.com/ust-scent.png" />
 
-    <link rel="icon" type="image/png" href="https://github.com/ust-scent.png" />
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
+    <link rel="apple-touch-icon" href="/assets/logo.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -122,26 +124,11 @@
       }
 
       .logo {
-        width: 96px;
-        height: 96px;
-        border-radius: 50%;
-        background:
-          radial-gradient(circle at 30% 30%, #b08bff 0%, #6c3eff 35%, #2c1066 75%, #0a0218 100%);
-        box-shadow:
-          0 0 48px rgba(138, 92, 255, 0.4),
-          0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+        width: 112px;
+        height: 112px;
         margin-bottom: 40px;
-        position: relative;
-      }
-      .logo::after {
-        content: "";
-        position: absolute;
-        inset: 8%;
-        border-radius: 50%;
-        background:
-          radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.4) 0%, transparent 35%),
-          transparent;
-        pointer-events: none;
+        filter: drop-shadow(0 0 32px rgba(138, 92, 255, 0.5));
+        user-select: none;
       }
 
       h1 {
@@ -263,9 +250,13 @@
       @media (max-width: 600px) {
         body { padding: 16px; }
         main { padding: 48px 0; }
-        .logo { width: 80px; height: 80px; margin-bottom: 32px; }
+        .logo { width: 88px; height: 88px; margin-bottom: 32px; }
         .info-grid { margin-top: 40px; }
         footer { flex-direction: column; align-items: flex-start; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .status-pill .blip { animation: none; }
       }
     </style>
   </head>
@@ -283,7 +274,7 @@
     </nav>
 
     <main>
-      <div class="logo" role="img" aria-label="SCENTDEX logo"></div>
+      <img class="logo" src="/assets/logo.svg" alt="SCENTDEX" width="112" height="112" />
 
       <h1>SCENTDEX</h1>
 
